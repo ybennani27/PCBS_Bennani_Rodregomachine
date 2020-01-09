@@ -20,10 +20,10 @@ The second challenging question for me was: "how could I represent my two key in
 
 [... complete...]
 
-##Experience before the PCBS course
+## Experience before the PCBS course
 I had no previous knowledge of programming whatsoever. I come from a background in social science and philosophy.
 
-##After the PCBS course
+## After the PCBS course
 I hope I have learned to write a code properly, that is, I feel that I now learned what procedure to follow in order to write a program that responds to a specific task, starting from a blank slate.
 I have also learned:
 python's basic tools such as lists, dictionaries, etc
