@@ -8,7 +8,7 @@ end
 registers=[0]*10
 registers[1]=5
 registers[2]=6
-print("Le tab registers avant modification: ")
+print("Register's tab before modification: ")
 print(registers)
 prg = [l.split() for l in program.splitlines()]
 print(prg)
@@ -17,21 +17,31 @@ instruction = prg[IP][0]
 
 while instruction == 'inc' or instruction == 'deb':
 
-    if instruction == 'inc':     #Start increment()
-        registers[int(prg[int(IP)][1])]+=1     #On ajoute 1 à la case sélectionnée (n)
-        IP = prg[int(IP)][2]     #Pointe sur la prochaine étape à suivre
-        instruction = prg[int(IP)][0]    #Go to step m
+#Start increment()
+    if instruction == 'inc':
+#Add 1 to the selected register(n)
+        registers[int(prg[int(IP)][1])]+=1
+#Point at next step to follow
+        IP = prg[int(IP)][2]
+#Go to step m
+        instruction = prg[int(IP)][0]
 
-    elif instruction == 'deb':     #Start decrement
-
-        if registers[int(prg[int(IP)][1])]>0:     #Condtion de passage = valeurs non nulles
-            registers[int(prg[int(IP)][1])]-=1     #On soustrait 1 à la case sélectionnée (n)
-            IP = prg[int(IP)][2]     #Pointe sur la prochaine étape à suivre
-            instruction = prg[int(IP)][0]     #Go to step m
+#Start decrement
+    elif instruction == 'deb':
+#Step's conditions = value not 0
+        if registers[int(prg[int(IP)][1])]>0:
+#Take 1 out of the selected register (n)
+            registers[int(prg[int(IP)][1])]-=1
+            IP = prg[int(IP)][2]
+#Point at next step to follow
+            instruction = prg[int(IP)][0]
+#Go to step m
             print(registers[int(prg[int(IP)][1])])
         else:
-            IP = prg[int(IP)][3]    #IP pointe sur la ligne de sortie
-            instruction = prg[int(IP)][0]     #Break command (ie go to step p)
+#IP points at the ending line
+            IP = prg[int(IP)][3]
+#Break command (ie go to step p)
+            instruction = prg[int(IP)][0]
 
-print("Le tab registers après modification:")
+print("Register's tab after modification:")
 print(registers)
