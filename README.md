@@ -90,7 +90,15 @@ The "deb" part is also divided into two options: either the number of beans in t
 After writing my code, I wanted to show how any of Dennett's programs (ex: "MOVE", "COPY", etc) can work.
 
 From two very basic instructions, "inc" and "deb", depending on the combinations of these two, can make powerful things.
+(Understanding Dennett's programs took me a great deal of re-doing and making sense of his diagrams on paper)
+- "ADD[1,2]""
 For instance the "ADD" program takes the beans inside register 1 and moves them into register 2.
+- "MOVE[4,5]"
+The "MOVE" program empties register 5. It decrements from register 4 and increments register 5, then goes back to register 4 and does the same... So, it is the equivalent of taking what's in register 4 and puts in in register 5.
+- "COPY[1,3]"
+The "COPY" program empties register 3 and 4. Then it "empties" beans from register 1 and "copies" them in registers 3 and 4. Then, it "empties" register 4 and "copies" its content in register 1.   
+- "Non-destructive ADD[1,2,3]"
+The "non-destructive ADD" program first "empties" registers 3 and 4. It then "empties" and "copies" the content of registers 1 in register 3 and 4 and then "empties" and "copies" register 4 in 1. And "empties" and "copies" the content of register 2 in registers 3 and 4 and then "empties" and "copies" register 4 in 2. 4 is then a "storage" register. The final result being that register 3 contains the sum of contents of registers 1 and 2.
 
 This is proving Dennett's claim that very elaborated machines, such as the Turing machine, are just following the same basics principles as the ones ruling my algorithm.
 
