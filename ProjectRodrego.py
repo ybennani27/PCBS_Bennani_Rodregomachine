@@ -1,3 +1,5 @@
+print ("Welcome to the Rodrego machine game")
+
 #Program Workline
 program= """
 inc 1 2
@@ -10,8 +12,11 @@ registers[1]=5
 registers[2]=6
 print("Register's tab before modification: ")
 print(registers)
+
+#prg isolates the different elements of program (quoted from Christophe Pallier's code)
 prg = [l.split() for l in program.splitlines()]
-print(prg)
+
+#IP, instruction pointer, is the step to follow
 IP = 1
 instruction = prg[IP][0]
 
@@ -20,7 +25,7 @@ while instruction == 'inc' or instruction == 'deb':
 #Start increment()
     if instruction == 'inc':
 #Add 1 to the selected register(n)
-        registers[int(prg[int(IP)][1])]+=1
+        registers[int(prg[int(IP)][1])-1]+=1
 #Point at next step to follow
         IP = prg[int(IP)][2]
 #Go to step m
@@ -29,14 +34,12 @@ while instruction == 'inc' or instruction == 'deb':
 #Start decrement
     elif instruction == 'deb':
 #Step's conditions = value not 0
-        if registers[int(prg[int(IP)][1])]>0:
+        if registers[int(prg[int(IP)][1])-1]>0:
 #Take 1 out of the selected register (n)
-            registers[int(prg[int(IP)][1])]-=1
+            registers[int(prg[int(IP)][1])-1]-=1
             IP = prg[int(IP)][2]
 #Point at next step to follow
             instruction = prg[int(IP)][0]
-#Go to step m
-            print(registers[int(prg[int(IP)][1])])
         else:
 #IP points at the ending line
             IP = prg[int(IP)][3]
