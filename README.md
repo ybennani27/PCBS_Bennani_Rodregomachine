@@ -19,17 +19,17 @@ Whereas the "Dec" instruction means "subtract 1" to the current register. Starti
 
 
 ## I. Explicating the algorithm
-###(1) Registers
+### (1) Registers
 For formulating the Rodrego machine algorithm, I started by imagining the machine's area of execution as being a large table with many distinct registers (e.g. boxes).
 
 
-###(2) Deb
+### (2) Deb
 There is, indeed, a problem when reviewing the simple two instructions "Inc" and "Dec". What happens when the register is empty? Because, as Dennett notices it, "you can't take a been out of an empty box" (p. 111).
 
 The answer also explains why my code contains the "deb" instruction instead of "dec". It is because the instruction "deb" (e.g. branch) includes the solution to the problem of "finding an empty register". When the register is empty, the instruction is to go directly to the next step. This is formulated as follows: "Decrement register n (subtract 1 from the contents of register n) if you can and go to step m OR if you can't decrement register n (namely if it is empty), Branch to step p".
 
 
-###(3) Program
+### (3) Program
 The line of action of my algorithm is defined by "program".
 
 In order to conceive of program precisely, I copied Dennett's way of imagining the machine's actions, i.e. :
@@ -63,7 +63,7 @@ Thus, I understood the "prg" line was there to help isolate the different elemen
 Having distinct lines has a specific role: lines mark the new step to follow (whether the next line or the previous line).  
 
 
-###(4) IP
+### (4) IP
 One question was: how do I make it clear what current instruction to follow? IP is the solution: it is my instruction pointer. I just needed to store in a variable (e.g. the instruction to follow).
 
 IP = 1
@@ -71,14 +71,14 @@ instruction = prg[IP][0]
 means the instruction is to go at the second line, first column (considering the first line of the program is an empty line and considering the first column, namely "inc / deb // end").
 
 
-###(5) Representation of the key instructions
+### (5) Representation of the key instructions
 One challenging question for me was: "how could I represent my two key instructions 'Inc' and 'Dec'?"
 Here, I decided to write a while loop including both instructions "inc" and "deb".
 The while loop is divided into two options: either instruction "inc" or instruction "deb".
 The "deb" part is also divided into two options: either the number of beans in the register is > 0, in which case (if registers > 0 then dec) the instruction is in fact the equivalent of "dec", namely subtract 1; or the number of beans in the register is = 0, in which case ("else") the instruction becomes "end".
 
 
-###(6) All the machine can do
+### (6) All the machine can do
 After writing my code, I wanted to show how any of Dennett's programs (ex: "MOVE", "COPY", etc) can work.
 
 From two very basic instructions, "inc" and "deb", depending on the combinations of these two, can make powerful things.
