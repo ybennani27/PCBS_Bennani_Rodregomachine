@@ -46,12 +46,14 @@ But this, in its current state, is hardly usable. I needed to make it clear that
 (This is a line I quote from Christophe Pallier's solutions to exercises).
 This line was hard to understand for me.
 I proceeded by trial and error. I first tried understanding the different tools of the line by testing what each one was doing:
-'prg1 = [l for l in program]
+```
+prg1 = [l for l in program]
 print(prg1)
 prg2 = [l for l in program.splitlines()]
 print(prg2)
 prg3 = [l.split() for l in program.splitlines()]
-print(prg3)'
+print(prg3)
+```
 It gave me this:
  ```
  ['\n', 'i', 'n', 'c', ' ', '1', ' ', '2', '\n', 'd', 'e', 'b', ' ', '2', ' ', '1', ' ', '3', '\n', 'e', 'n', 'd', '\n']
@@ -70,8 +72,10 @@ Having distinct lines has a specific role: lines mark the new step to follow (wh
 ### (4) IP
 One question was: how do I make it clear what current instruction to follow? IP is the solution: it is my instruction pointer. I just needed to store in a variable (e.g. the instruction to follow).
 
-'IP = 1
-instruction = prg[IP][0]'
+```
+IP = 1
+instruction = prg[IP][0]
+```
 means the instruction is to go at the second line, first column (considering the first line of the program is an empty line and considering the first column, namely "inc / deb // end").
 
 
