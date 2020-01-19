@@ -33,11 +33,13 @@ The answer also explains why my code contains the "deb" instruction instead of "
 The line of action of my algorithm is defined by "program".
 
 In order to conceive of program precisely, I copied Dennett's way of imagining the machine's actions, i.e. :
-'program= """
+```
+program= """
 inc 1 2
 deb 2 1 3
 end
-""" '
+"""
+```
 
 But this, in its current state, is hardly usable. I needed to make it clear that each element of program is isolated from one another, in order to use it. This is what the following line of the program helped me to do:
 'prg = [l.split() for l in program.splitlines()]'
@@ -51,11 +53,11 @@ print(prg2)
 prg3 = [l.split() for l in program.splitlines()]
 print(prg3)'
 It gave me this:
- '''
+ ```
  ['\n', 'i', 'n', 'c', ' ', '1', ' ', '2', '\n', 'd', 'e', 'b', ' ', '2', ' ', '1', ' ', '3', '\n', 'e', 'n', 'd', '\n']
 ['', 'inc 1 2', 'deb 2 1 3', 'end']
 [[], ['inc', '1', '2'], ['deb', '2', '1', '3'], ['end']]
-'''
+```
 
 I then understood that the first prg1 was not recognizing correctly each element. For prg1, the delimiting object was the number of element: if there was a coming back to the next line, prg1 was counting it as "/n", if there was one letter prg1 was counting it as an element "i", etc.
 For prg2, the delimiting object was the lines. It counted different elements each time they were separated by a new line (ex: "inc 1 2 ", "deb 2 1 3", etc).
