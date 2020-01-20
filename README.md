@@ -89,7 +89,7 @@ The "deb" part is also divided into two options: either the number of beans in t
 ### (6) All the machine can do
 After writing my code, I wanted to show how any of Dennett's programs (ex: "MOVE", "COPY", etc) can work.
 
-From two very basic instructions, "inc" and "deb", depending on the combinations of these two, can make powerful things.
+From two very basic instructions, "inc" and "deb", depending on the combinations of these two, the machine can make powerful things.
 (Understanding Dennett's programs took me a great deal of re-doing and making sense of his diagrams on paper)
 
 - "ADD[1,2]""
@@ -159,10 +159,11 @@ This is proving Dennett's claim that very elaborated machines, such as the Turin
 ## Conclusion
 To quote Dennett, "at first glance, you might not think such a simple machine could do anything very interesting; all it can do is put a bean in the box or take a bean out of the box" (p. 112). But in fact, as proven in the previous section, the machine can do all sorts of different things, which I checked and justified to be doable in the algorithm I propose.  
 
-The Rodrego machine is just a simpler machine than the Turing machine, but it follows the same basic principles. The machine's principle is to chug back and forth along a paper tape constituted of little squares. It follows rules that make the instruction different whether the machine reads 0 or 1 on the squares. "All the machine can do is flip the bit (erasing 0, writing 1, or vice versa) or leave the bit alone and then move left or right one tape square and go to its next instruction" (Dennett, p. 128). Well, well... this is very similar to the core principle of our Rodrego machine: following simple instructions, the machine can perform complex tasks.
+The Rodrego machine is just a simpler machine than the Turing machine, but it follows the same basic principles. The machine's principle is to chug back and forth along a paper tape constituted of little squares. It follows rules that make the instruction different whether the machine reads 0 or 1 on the squares. "All the machine can do is flip the bit (erasing 0, writing 1, or vice versa) or leave the bit alone and then move left or right one tape square and go to its next instruction" (Dennett, p. 128). Well, well... this is very similar to the core principle of our Rodrego machine: by following simple instructions, the machine can perform complex tasks.
 
-In fact, this is the most fascinating thing. It corresponds to the secret 6 revealed in this chapter: "all the improvements in computers since Turing invented his imaginary paper-tape machine are simply ways of making them faster".
-That's it. From the von Neumann machine, all we are trying to do now is just to make machines faster. But the core of everything is just very simple instructions, just like the Rodrego machine ones.
+In fact, this is the most fascinating thing I realized. The idea is revealed in secret 6 of this chapter: "all the improvements in computers since Turing invented his imaginary paper-tape machine are simply ways of making them faster".
+
+That's it. From the von Neumann machine, all we are trying to do now is just to make machines faster. But the core of everything is nothing more than simple instructions.
 
 
 
@@ -204,12 +205,12 @@ Answer:
 
 b. What happens when the program tries to subtract 3 or 4 from 4?
 
-Answer: It happens that the program halts.
+Answer: It happens that the program bugs.
 
 c. What possible error is prevented by zeroing out register 3 before trying the subtraction at step 3 instead of after step 4?
 
 Answer: What I understand from the graph is that the program is performing a subtraction. It subtract the content of register 2 from the content of register 1 and the content of register 3 gives us the sign of the result: if register 3 contains 1 bean, the result is negative and if it contains 0 bean, it is positive. And the result of the operation is given by the value of register 4.
-I didn't get exactly why we have to reset the content of register 3 to 0 before starting the subtraction (maybe because otherwise, if register 1 and 2 were empty, not emptying register 3 before, it would never pass by step 4?).
+I didn't get exactly why we have to reset the content of register 3 to 0 before starting the subtraction (maybe because otherwise, if register 1 and 2 were empty, not emptying register 3 before, the program would never pass by step 4?).
 
 
 Exercise 3
@@ -255,7 +256,7 @@ Here is the RAP program:
 12. End
 ```
 
-c. I didn't understand the question here.
+c. I'm not sure I understood the question here. I haven't managed to find the solution.
 
 
 ## Experience before the PCBS course
