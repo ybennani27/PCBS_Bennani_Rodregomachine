@@ -169,15 +169,24 @@ That's it. From the von Neumann machine, all we are trying to do now is just to 
 ## Annex (exercises from the chapter):
 
 Exercise 1
+
 a. How many steps will it take the register machine to add 2 + 5 and get 7, running Program 1 (counting end as a step)?
+
 Answer: I simulated it on paper. It gave me 5 steps: 2 decrements, 2 increments and end.
+
 b. How many steps will it take to add 5 + 2?
+
 Answer: (same, on paper). I found 11 steps: 5 decrements, 5 increments and end.
+
 What conclusion do you draw from this?
+
 Answer: The conclusion is that when register 1 is fuller (ex: 5 beans instead of 2), it takes more steps (more time) for the Registermachine to transfer the content of register 1 to register 2.
 
+
 Exercise 2
+
 a. Write the RAP program for this flow graph (p. 120).
+
 ANSWER:
 ```
 1. Deb 4 1 2
@@ -194,8 +203,11 @@ ANSWER:
 ```
 
 b. What happens when the program tries to subtract 3 or 4 from 4?
+
 Answer: It happens that the program halts.
+
 c. What possible error is prevented by zeroing out register 3 before trying the subtraction at step 3 instead of after step 4?
+
 Answer: What I understand from the graph is that the program is performing a subtraction. It subtract the content of register 2 from the content of register 1 and the content of register 3 gives us the sign of the result: if register 3 contains 1 bean, the result is negative and if it contains 0 bean, it is positive. And the result of the operation is given by the value of register 4.
 I didn't get exactly why we have to reset the content of register 3 to 0 before starting the subtraction (maybe because otherwise, if register 1 and 2 were empty, not emptying register 3 before, it would never pass by step 4?).
 
