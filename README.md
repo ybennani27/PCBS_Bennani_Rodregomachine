@@ -169,7 +169,7 @@ That's it. From the von Neumann machine, all we are trying to do now is just to 
 
 ## Annex (exercises from the chapter):
 
-Exercise 1
+### Exercise 1
 
 a. How many steps will it take the register machine to add 2 + 5 and get 7, running Program 1 (counting end as a step)?
 
@@ -184,7 +184,7 @@ What conclusion do you draw from this?
 Answer: The conclusion is that when register 1 is fuller (ex: 5 beans instead of 2), it takes more steps (more time) for the Registermachine to transfer the content of register 1 to register 2.
 
 
-Exercise 2
+### Exercise 2
 
 a. Write the RAP program for this flow graph (p. 120).
 
@@ -213,7 +213,7 @@ Answer: What I understand from the graph is that the program is performing a sub
 I didn't get exactly why we have to reset the content of register 3 to 0 before starting the subtraction (maybe because otherwise, if register 1 and 2 were empty, not emptying register 3 before, the program would never pass by step 4?).
 
 
-Exercise 3
+### Exercise 3
 
 a. Write the RAP program for multiplying the content of register 1 by content of register 3 putting the answer in register 5.
 
