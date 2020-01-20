@@ -1,5 +1,5 @@
 # Final Project - Yasmine Bennani
-### Programming a Rodrego machine according to Dennett's chapter "The seven secrets of computer power revealed"
+### Programming a Rodrego machine according to Dennett's chapter "The seven secrets of computer power revealed" (Intuition Pumps and Other Tools for Thinking, 2013)
 
 
 
@@ -163,6 +163,11 @@ This is proving Dennett's claim that very elaborated machines, such as the Turin
 
 ## Conclusion
 To quote Dennett, "at first glance, you might not think such a simple machine could do anything very interesting; all it can do is put a bean in the box or take a bean out of the box" (p. 112). But in fact, as proven in the previous section, the machine can do all sorts of different things, which I checked and justified to be doable in the algorithm I propose.  
+
+The Rodrego machine is just a simpler machine than the Turing machine, but it follows the same basic principles. The machine's principle is to chug back and forth along a paper tape constituted of little squares. It follows rules that make the instruction different whether the machine reads 0 or 1 on the squares. "All the machine can do is flip the bit (erasing 0, writing 1, or vice versa) or leave the bit alone and then move left or right one tape square and go to its next instruction" (Dennett, p. 128). Well, well... this is very similar to the core principle of our Rodrego machine: following simple instructions, the machine can perform complex tasks.
+
+In fact, this is the most fascinating thing. It corresponds to the secret 6 revealed in this chapter: "all the improvements in computers since Turing invented his imaginary paper-tape machine are simply ways of making them faster".
+That's it. From the von Neumann machine, all we are trying to do now is just to make machines faster. But the core of everything is just very simple instructions, just like the Rodrego machine ones.
 
 
 ## Experience before the PCBS course
