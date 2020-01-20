@@ -1,6 +1,6 @@
 print ("Welcome to the Rodrego machine game")
 
-#Program Workline
+#Program Workline (quoted from Christophe Pallier's code)
 program= """
 inc 1 2
 deb 2 1 3
