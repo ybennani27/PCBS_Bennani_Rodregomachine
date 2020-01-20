@@ -170,17 +170,22 @@ I had zero knowledge in programming (I come from a background in social science 
 
 The exercises we needed to do every week for the course were very hard for me. It used to take me long to understand and try doing them. I was happy to have "Automating the boring stuff" as a guideline; it was fun to read and it helped me get familiar with the concepts.
 
-This project was perfectly suited to my learning goals. Coming to the Cogmaster, my aim was to gain the basic vocabulary in computer science and machine learning to get a better grasp on the debates at the heart of philosophy of mind. Whether machines could ever replicate what minds can do is exactly the type of questions I am interested in.
-I was very happy to actually "build" an argument, "from my own hands", to ground the claim that very basic machines could do very complex things (and perhaps one day, do what minds can do).
-
 
 ## After the PCBS course
-I hope I have learned to write a code properly, that is, I feel that I now learned what procedure to follow in order to write a - program that responds to a specific problem.
+This project was perfectly suited to my learning goals. Coming to the Cogmaster, my aim was to gain basic vocabulary in computer science and machine learning to get a better grasp on the debates at the heart of philosophy of mind and AI. Whether machines could ever replicate what minds can do is exactly the type of questions I am interested in.
+I was very happy to actually "build" an argument, "from my own hands", to ground the claim that very basic machines could do very complex things (and perhaps one day, do what minds can do).
+
+I hope I have learned to write a code properly, that is, I feel that I now learned what procedure to follow in order to write a program that responds to a specific problem.
+
 I have also learned:
 - python's basic tools such as lists, dictionaries, etc
+
 - How to write loops
+
 - But also pandas and Numpy
+
 - How to use the shell
+
 - How to use Github
 
 This project made me feel more confident that I could understand the basic principles of a code and the conceptual depth of it. Here, it took me a great deal of time to, first, understand Dennett's chapter, second write a corresponding script (for this, I spent days in a row writing it. I am grateful I had the code from the course as a guideline) and third, to really understand all the implications of the code (by doing the exercises of the chapter - and some were really hard for me). It was both a programming and logical challenge for me. But I am very happy I did it.
@@ -188,5 +193,6 @@ This project made me feel more confident that I could understand the basic princ
 
 ## Feedbacks for the course
 The programing course was actually the one I was the most looking forward, when entering the Cogmaster. It was one of my highest motivation to reorient my curriculum towards cognitive sciences to complete my background in social sciences and philosophy of mind, because I want to specialize in questions related to AI.
+This project made me curious and motivated to do more.
 
-In terms of feedbacks, I would first say that it is important to separate groups by levels because I felt horribly demotivated siting next to people who had a whole other (high) level in programing. I was always censuring myself to ask questions because they were way too "beginner level". I think I needed more time to assimilate the vocabulary and the general logic of coding.
+In the weekly class, I would say that it is important to separate groups by levels because I felt horribly demotivated siting next to people who had a whole other (high) level in programing. I was always censuring myself to ask questions because they were way too "beginner level". I think I needed much more time to assimilate the vocabulary and the general logic of coding.
