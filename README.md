@@ -187,7 +187,7 @@ Exercise 2
 
 a. Write the RAP program for this flow graph (p. 120).
 
-ANSWER:
+Answer:
 ```
 1. Deb 4 1 2
 2. Deb 3 2 3
@@ -255,7 +255,7 @@ Here is the RAP program:
 12. End
 ```
 
-c. I didn't understand the question here. 
+c. I didn't understand the question here.
 
 
 ## Experience before the PCBS course
