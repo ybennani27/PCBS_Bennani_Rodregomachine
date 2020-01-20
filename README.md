@@ -212,9 +212,50 @@ Answer: What I understand from the graph is that the program is performing a sub
 I didn't get exactly why we have to reset the content of register 3 to 0 before starting the subtraction (maybe because otherwise, if register 1 and 2 were empty, not emptying register 3 before, it would never pass by step 4?).
 
 
+Exercise 3
 
+a. Write the RAP program for multiplying the content of register 1 by content of register 3 putting the answer in register 5.
 
+Answer: The program needs to empty register 5, 2 and 4.
+The general principle will be to transfer the content of register 1 in register 5 each time one bean is transferred from register 3 to 4.
 
+It takes one bean from register 3 and puts it in register 4. Then it needs to transfer the content of register 1 in register 2 and 5 (Note that once register 1 is empty, it transfers back the content of register 2 and puts it back in register 1). Then it takes one bean from register 3 and puts it in 4. Then it restarts transferring the content of register 1 in register 2 and 5. It transfers one bean
+from register 3 in register 4. And fills back register 1. Etc etc. Until register 3 is empty. When register 3 is empty, the final content of register 5 is the multiplication of the contents of register 1 and register 3.
+
+RAP Program:
+```
+1. Deb 5 1 2
+2. Deb 2 2 3
+3. Deb 3 4 9
+4. Deb 1 5 7
+5. Inc 5 6
+6. Inc 2 4
+7. Deb 2 8 3
+8. Inc 1 7
+9. End
+```
+
+b. Using Copy and Move, improve the multiplyer you created in problem a: when it stops, the original contents of register 1 and register 3 are restored, so that you can easily check the inputs and output for correctness after a run.
+
+So the program actually needs to add a step to transfer back the content of register 4 in register 3.
+
+Here is the RAP program:
+```
+1. Deb 5 1 2
+2. Deb 2 2 3
+3. Deb 3 4 11
+4. Deb 4 5
+5. Inc 1 6 8
+6. Inc 5 7
+7. Inc 2 5
+8. Deb 2 9 3
+9. Inc 1 8
+10. Inc 3 11
+11. Deb 4 10 12
+12. End
+```
+
+c. I didn't understand the question here. 
 
 
 ## Experience before the PCBS course
