@@ -272,7 +272,7 @@ I was very happy to actually "build" an argument, "from my own hands", to ground
 I hope I have learned to write a code properly, that is, I feel that I now learned what procedure to follow in order to write a program that responds to a specific problem.
 
 I have also learned:
-- python's basic tools such as lists, dictionaries, etc
+- python's basic tools such as lists or dictionaries
 
 - How to write loops
 
@@ -286,7 +286,7 @@ This project made me feel more confident that I could understand the basic princ
 
 
 ## Feedbacks for the course
-The programing course was actually the one I was the most looking forward, when entering the Cogmaster. It was one of my highest motivation to reorient my curriculum towards cognitive sciences to complete my background in social sciences and philosophy of mind, because I want to specialize in questions related to AI.
+The programing course was one of the courses I was the most looking forwards to, when entering the Cogmaster because I aim at specializing in questions related to AI.
 This project made me curious and motivated to do more.
 
 In the weekly class, I would say that it is important to separate groups by levels because I felt horribly demotivated siting next to people who had a whole other (high) level in programing. I was always censuring myself to ask questions because they were way too "beginner level". I think I needed much more time to assimilate the vocabulary and the general logic of coding.
