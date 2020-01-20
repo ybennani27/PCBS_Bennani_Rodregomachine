@@ -18,13 +18,13 @@ Whereas the "Dec" instruction means "subtract 1" to the current register. Starti
 
 
 
-## I. Explicating the algorithm
+## I. Explaining the algorithm
 ### (1) Registers
 For formulating the Rodrego machine algorithm, I started by imagining the machine's area of execution as being a large table with many distinct registers (e.g. boxes).
 
 
 ### (2) Deb
-There is, indeed, a problem when reviewing the simple two instructions "Inc" and "Dec". What happens when the register is empty? Because, as Dennett notices it, "you can't take a been out of an empty box" (p. 111).
+There is, indeed, a problem when reviewing the simple two instructions "Inc" and "Dec". What happens when the register is empty? Because, as Dennett notices it, "you can't take a bean out of an empty box" (p. 111).
 
 The answer also explains why my code contains the "deb" instruction instead of "dec". It is because the instruction "deb" (e.g. branch) includes the solution to the problem of "finding an empty register". When the register is empty, the instruction is to go directly to the next step. This is formulated as follows: "Decrement register n (subtract 1 from the contents of register n) if you can and go to step m OR if you can't decrement register n (namely if it is empty), Branch to step p".
 
@@ -94,7 +94,7 @@ From two very basic instructions, "inc" and "deb", depending on the combinations
 
 - "ADD[1,2]""
 
-For instance the "ADD" program takes the beans inside register 1 and moves them into register 2.
+For instance the "ADD" program "takes" the beans inside register 1 and "moves" them into register 2.
 ```
 program= """
 deb 1 2 3
@@ -102,6 +102,11 @@ inc 2 1
 end
 """
 ```
+Solutions to Exercise 1 p. 113
+a) It will take 5 steps for the Registermachine to add 2+5 (counting end as a step).
+b) It will take 11 steps for the Registermachine to add 5+2.
+The conclusion to draw being that when register 1 is fuller (ex: 5 beans instead of 2), it takes more steps (more time) for the Registermachine to transfer the content of register 1 to register 2.
+
 
 - "MOVE[4,5]"
 
@@ -161,8 +166,12 @@ To quote Dennett, "at first glance, you might not think such a simple machine co
 
 
 ## Experience before the PCBS course
-I had no previous knowledge of programming whatsoever. I come from a background in social science and philosophy.
-This project was exactly meeting my expectations in philosophy, namely to actually "build" an argument, "from my own hands", to argue that very basic machines could do very complex things (and perhaps one day, do what minds can do).
+I had zero knowledge in programming (I come from a background in social science and philosophy). I was intimidated by the vocabulary and the apparent complexity of coding. To be honest, I think I had to overcome two difficulties: first, starting with no priori programming knowledge, and -most importantly- overcoming my huge bias vis-à-vis coding as a social science student.
+The exercises we needed to do every week for the course were very hard for me. It used to take me very long to understand them and try doing some of them. I was happy to have "Automating the boring stuff" as a guideline; it was fun to read and it helped me get familiar with the concepts.
+
+This project was really perfect for me. Coming to the Cogmaster, my aim was to gain the basic vocabulary in computer science and basic machine learning to get a better grasp on the philosophy of mind debates. Whether machines could ever replicate what minds can do is exactly the type of questions I am interested in.
+I was very happy to actually "build" an argument, "from my own hands", to argue that very basic machines could do very complex things (and perhaps one day, do what minds can do).
+
 
 ## After the PCBS course
 I hope I have learned to write a code properly, that is, I feel that I now learned what procedure to follow in order to write a program that responds to a specific problem.
@@ -172,3 +181,12 @@ How to write loops
 But also pandas and Numpy
 How to use the shell
 How to use Github
+
+This project made me feel more confident that I could understand the basic principles of a code and the conceptual depth of it. Here, it took me a great deal of time to, first, understand Dennett's chapter, second write a corresponding script (for this, I spent days in a row to write it ! I am grateful I had the code from the course as a guideline) and third, to really understand all the implications of the code (by doing the exercises of the chapter - and some were really hard for me). It was both a programming and logical challenge for me. But I am very happy I did it.
+
+
+## Feedbacks for the course
+The programing course was actually the one I was the most looking for when entering the Cogmaster - as I want to specialize in questions related to AI and, thus, because it was one of my highest motivation to reorient my curriculum towards cognitive sciences to complete my background in social sciences and philosophy of mind.
+
+In terms of feedbacks, I would first say that it is important to separate groups by level because I felt horribly demotivated siting next to people who had a very high level in programing. I was always censuring myself to ask questions because they were way too "beginner level". I think I needed more time to assimilate the vocabulary and the general logic.
+Maybe it could have been more helpful to merge this course with the datacamp one or to integrate both in a way that makes one complete the other; for example make one be the lecture and the other the "application" session. Or just give more time to both courses.
